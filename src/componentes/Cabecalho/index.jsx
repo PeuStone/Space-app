@@ -10,11 +10,11 @@ const HeaderEstilizado = styled.header`
     }
 `
 
-const Cabecalho = () => {
+const Cabecalho = ({ setFiltrar }) => {
     return (
         <HeaderEstilizado>
             <img src="/imagens/logo.png" alt="" />
-            <CampoTexto />
+            <CampoTexto setFiltrar={setFiltrar} />
         </HeaderEstilizado>
     )
 }

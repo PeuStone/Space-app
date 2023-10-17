@@ -5,21 +5,16 @@ const TagsContainer = styled.div`
     display: flex;
     margin-top: 56px;
     align-items: center;
-    gap: 24px;
+    gap: 64px;
 `
 
 const TituloEstilizado = styled.h3`
     color: #D9D9D9;
     font-size: 24px;
-    font-weight: 400;
-    line-height: 28.8px;
     margin: 0;
-    width: 219px;
-    padding-right: 17px;
-
 `
 
-const BotaoTagEstilizado = styled.button`
+const Tag = styled.button`
     font-size: 24px;
     color: #FFFFFF;
     border-radius: 10px;
@@ -34,11 +29,25 @@ const BotaoTagEstilizado = styled.button`
     }
 `
 
-const Tags = () => {
+const Div = styled.div`
+    display: flex;
+    gap: 24px;
+    justify-content: end;
+`
+
+const Tags = ({ setTag }) => {
     return (
         <TagsContainer>
             <TituloEstilizado>Busque por tags:</TituloEstilizado>
-            {tags.map(tag => <BotaoTagEstilizado key={tag.id}>{tag.titulo}</BotaoTagEstilizado>)}
+            <Div>
+                {tags.map(tag =>
+                    <Tag
+                        key={tag.id}
+                        onClick={() => setTag(tag.tag)}
+                    >{tag.titulo}
+                    </Tag>
+                )}
+            </Div>
         </TagsContainer>
     )
 
