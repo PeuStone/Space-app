@@ -58,6 +58,7 @@ function App() {
       </AppContainer>
       <ModalZoom
         foto={fotoSelecionada}
+        aoFechar={() => setFotoSelecionada(null)}
       />
     </FundoGradiente>
   )
