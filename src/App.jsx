@@ -37,6 +37,15 @@ function App() {
   const [fotosGaleria, setFotosGaleria] = useState(fotos)
   const [fotoSelecionada, setFotoSelecionada] = useState(null)
 
+  const aoAlternarFavorito = (foto) => {
+    setFotosGaleria(fotosGaleria.map(fotoGaleria => {
+      return {
+        ...fotoGaleria,
+        favorita: fotoGaleria.id === foto.id ? !foto.favorita : fotoGaleria.favorita
+      }
+    }));
+  }
+
   return (
     <FundoGradiente>
       <EstilosGlobais />
@@ -52,6 +61,7 @@ function App() {
             <Galeria
               aoFotoSelecionada={foto => setFotoSelecionada(foto)}
               fotos={fotosGaleria}
+              aoAlternarFavorito={aoAlternarFavorito}
             />
           </ConteudoGaleria>
         </MainContainer>
