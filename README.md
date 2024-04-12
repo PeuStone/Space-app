@@ -1,8 +1,16 @@
-# React + Vite
+# Projeto Space-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido durante o curso de React: estilize componentes com Styled Components e manipule arquivos estáticos
 
-Currently, two official plugins are available:
+# Principais tecnologias utilizadas no projeto
+* React
+* NodeJs
+* Styled-Components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Imagens do projeto
+
+![imagem da parte inicial do projeto](./public/ImagensProjeto/PaginaInicial.png)
+Parte contendo o contéudo principal do projeto
+
+![imagem contendo uma das funções feitas no projeto](./public/ImagensProjeto/Feature.png)
+Parte contendo uma das funções feitas no projeto
